@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar prefHeight="25.0" prefWidth="167.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="br.mypetsitter.controller.MenuPrincipalAdmController">
+  <menus>
+    <Menu mnemonicParsing="false" text="Minha conta">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
+      </items>
+    </Menu>
+    <Menu mnemonicParsing="false" text="Gerenciar">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#gerenciarServicos" text="Serviços" />
+            <MenuItem mnemonicParsing="false" onAction="#gerenciarUsuarios" text="Usuários" />
+      </items>
+    </Menu>
+  </menus>
+</MenuBar>
