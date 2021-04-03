@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="691.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: lightSeaGreen;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.mypetsitter.controller.GerenciarCadastroPetSitterController">
+   <children>
+      <ImageView fitHeight="139.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <ScrollPane prefHeight="454.0" prefWidth="576.0" style="-fx-background-color: white;">
+         <content>
+            <VBox alignment="CENTER" fillWidth="false" prefHeight="554.0" prefWidth="570.0" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <Label text="Alterar dados cadastrais">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox layoutX="25.0" layoutY="85.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Usuário:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdUsuario" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="280.0" spacing="5.0">
+                     <children>
+                        <Label text="Nome completo:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdNome" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="149.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Cpf:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdCpf" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="25.0" layoutY="213.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Cnpj:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdCnpj" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="407.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Telefone:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdTelefone" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="277.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Cidade:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdCidade" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="435.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Estado:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cbEstado" prefHeight="25.0" prefWidth="75.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="390.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Endereço:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdEndereco" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="450.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Bairro:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdBairro" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="455.0" prefHeight="54.0" prefWidth="275.0" spacing="5.0">
+                     <children>
+                        <Label text="Cep:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfdCep" prefHeight="25.0" prefWidth="179.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="239.0" layoutY="459.0" prefHeight="28.0" prefWidth="289.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="157.0" text="Data de Nascimento:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="tfdDataNascimento" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="29.0" prefWidth="305.0" spacing="5.0">
+                     <children>
+                        <JFXButton onAction="#alteraDadosUsuario" style="-fx-background-color: lightSeaGreen;" text="Concluir Alterações" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="10.0" layoutY="10.0" onAction="#mudarSenha" style="-fx-background-color: lightSeaGreen;" text="Mudar minha senha" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+               </padding>
+            </VBox>
+         </content>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+         </VBox.margin>
+      </ScrollPane>
+   </children>
+</VBox>

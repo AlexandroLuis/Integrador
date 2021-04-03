@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: lightSeaGreen;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.mypetsitter.controller.GerenciarPetSitterController">
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+   </padding>
+   <children>
+      <ImageView fitHeight="120.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logoSemEscrita.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="435.0" prefWidth="844.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="PetSitters cadastrados">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="petsitters" fixedCellSize="0.0" onMouseClicked="#monitorarPetSitter" prefHeight="231.0" prefWidth="700.0">
+               <columns>
+                  <TableColumn fx:id="colunaId" prefWidth="75.0" resizable="false" style="-fx-alignment: CENTER;" text="ID" />
+                  <TableColumn fx:id="colunaNome" prefWidth="143.0" resizable="false" style="-fx-alignment: CENTER;" text="NOME" />
+                  <TableColumn fx:id="colunaCpf" prefWidth="115.0" resizable="false" style="-fx-alignment: CENTER;" text="CPF" />
+                  <TableColumn fx:id="colunaCnpj" maxWidth="345.0" minWidth="30.0" prefWidth="111.0" resizable="false" style="-fx-alignment: CENTER;" text="CNPJ" />
+                  <TableColumn fx:id="colunaTelefone" prefWidth="126.0" style="-fx-alignment: CENTER;" text="TELEFONE" />
+                  <TableColumn fx:id="colunaCidade" prefWidth="129.0" style="-fx-alignment: CENTER;" text="CIDADE" />
+                  <TableColumn fx:id="colunaEstado" prefWidth="75.0" style="-fx-alignment: CENTER;" text="ESTADO" />
+                  <TableColumn fx:id="colunaEndereco" prefWidth="160.0" style="-fx-alignment: CENTER;" text="ENDEREÇO" />
+                  <TableColumn fx:id="colunaBairro" prefWidth="160.0" style="-fx-alignment: CENTER;" text="BAIRRO" />
+                  <TableColumn fx:id="colunaCep" prefWidth="160.0" style="-fx-alignment: CENTER;" text="CEP" />
+                  <TableColumn fx:id="colunaDataNascimento" editable="false" prefWidth="143.0" style="-fx-alignment: CENTER;" text="DATA DE NASCIMENTO" />
+                  <TableColumn fx:id="colunaDataCadastro" editable="false" prefWidth="143.0" style="-fx-alignment: CENTER;" text="DATA DE CADASTRO" />
+               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <HBox prefHeight="30.0" prefWidth="704.0" spacing="3.0">
+               <children>
+                  <JFXButton fx:id="btnRemover" disable="true" layoutX="10.0" layoutY="10.0" onAction="#removePetSitterSelecionado" prefHeight="64.0" prefWidth="154.0" style="-fx-background-color: LightSeaGreen;" text="Remover" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets right="235.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: lightSeaGreen;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="br.mypetsitter.controller.AlteraServicoAdmController">
+   <children>
+      <ImageView fitHeight="139.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="365.0" prefWidth="642.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Alterar dados do serviço">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="51.0" prefWidth="217.0" spacing="5.0">
+               <children>
+                  <Label text="Nome:" />
+                  <JFXTextField fx:id="tfdNome" />
+               </children>
+            </HBox>
+            <HBox layoutX="231.0" layoutY="185.0" prefHeight="51.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Label text="Categoria:" />
+                  <JFXComboBox fx:id="cbCategoria" prefHeight="25.0" prefWidth="120.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="231.0" layoutY="210.0" prefHeight="36.0" prefWidth="223.0" spacing="5.0">
+               <children>
+                  <Label text="Descrição:" />
+                  <JFXTextArea fx:id="txtDescricao" prefHeight="51.0" prefWidth="125.0" />
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" onAction="#alterarServico" style="-fx-background-color: lightSeaGreen;" text="Confirmar alterações" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+   </padding>
+</VBox>

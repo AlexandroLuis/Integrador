@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: lightSeaGreen;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.mypetsitter.controller.IncluiServicoPetSitterController">
+   <children>
+      <ImageView fitHeight="139.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="435.0" prefWidth="844.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Serviços Cadastrados">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="servicos" fixedCellSize="0.0" onMouseClicked="#monitoraServico" prefHeight="231.0" prefWidth="700.0">
+               <columns>
+                  <TableColumn fx:id="colunaId" prefWidth="75.0" resizable="false" style="-fx-alignment: CENTER;" text="ID" />
+                  <TableColumn fx:id="colunaNome" prefWidth="143.0" resizable="false" style="-fx-alignment: CENTER;" text="NOME" />
+                  <TableColumn fx:id="colunaCategoria" prefWidth="161.0" resizable="false" style="-fx-alignment: CENTER;" text="CATEGORIA" />
+                  <TableColumn fx:id="colunaDescricao" maxWidth="345.0" minWidth="30.0" prefWidth="330.0" resizable="false" style="-fx-alignment: CENTER;" text="DESCRIÇÃO" />
+               </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <HBox prefHeight="30.0" prefWidth="706.0" spacing="5.0">
+               <children>
+                  <JFXButton fx:id="btnIncluirServico" disable="true" onAction="#incluiNovoServico" prefHeight="30.0" prefWidth="234.0" style="-fx-background-color: LightSeaGreen;" text="Incluir serviço na minha carteira" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnVoltarTela" layoutX="28.0" layoutY="10.0" onAction="#voltarTela" prefHeight="30.0" prefWidth="270.0" style="-fx-background-color: LightSeaGreen;" text="Voltar para minha carteira de serviços" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+   </padding>
+</VBox>
