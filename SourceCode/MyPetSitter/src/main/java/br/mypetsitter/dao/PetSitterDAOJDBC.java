@@ -160,6 +160,18 @@ public class PetSitterDAOJDBC implements PetSitterDAO {
 		close();
 		return resultSet.next();
 	}
+	@Override
+	public boolean buscaUsuario(String petSitterId, String cpf) throws SQLException {
+		open();
+		this.sql = "SELECT * FROM PetSitter WHERE petSitterId = ? AND cpf = ?";
+		statement = connection.prepareStatement(sql);
+		statement.setString(1, petSitterId);
+		statement.setString(2, cpf);
+		statement.execute();
+		resultSet = statement.getResultSet();
+		close();
+		return resultSet.next();
+	}
 	
 
 

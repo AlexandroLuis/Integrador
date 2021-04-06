@@ -107,19 +107,19 @@ public class CadastroUsuarioController {
 
 	}
 
-	@SuppressWarnings("deprecation")
 	public void cadastraUsuario(ActionEvent event) {
-		System.out.println(tipo.length());
 		if ((!(tfdNome.getText().isEmpty()) && !(cbEstado.getValue().isEmpty()) && (tfdDataNascimento != null)
 				&& !(tfdCpf.getText().isEmpty()) && !(tfdTelefone.getText().isEmpty()) && !(tfdNome.getText().isEmpty())
 				&& !(tfdCidade.getText().isEmpty()) && !(tfdEndereco.getText().isEmpty())
 				&& !(tfdBairro.getText().isEmpty()) && !(tfdSenha.getText().isEmpty()) && !(tipo.isEmpty()))) {
-			Date dataLocal = Date.valueOf(LocalDate.now());
+			int anoAtual = LocalDate.now().getYear();
 			String userName = tfdUsuario.getText();
 			String estado = cbEstado.getValue();
 			LocalDate localDate = tfdDataNascimento.getValue();
 			Date dataNascimento = Date.valueOf(localDate);
-			if (!(dataNascimento.getDate() >= dataLocal.getDate())) {
+			System.out.println(LocalDate.now());
+			int idade = anoAtual - localDate.getYear();
+			if (idade > 17) {
 				String cpf = tfdCpf.getText();
 				String cnpj = tfdCnpj.getText();
 				String telefone = tfdTelefone.getText();
@@ -181,7 +181,7 @@ public class CadastroUsuarioController {
 			} else {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
 				alert.setTitle("Data de nascimento inválida!");
-				alert.setContentText("Informe uma data válida!");
+				alert.setContentText("A idade deve ser maior ou igual a 18 anos!");
 				alert.show();
 			}
 

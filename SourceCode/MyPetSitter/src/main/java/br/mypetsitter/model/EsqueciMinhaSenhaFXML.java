@@ -6,26 +6,29 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class LoginFXML extends Application {
-	private static Scene scene;
-	private static Stage stage;
+public class EsqueciMinhaSenhaFXML extends Application {
 	private static VBox root;
+	private static Stage stage;
+	private static Scene scene;
+	public static void main(String[] args) {
+		launch(args);
+	}
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/EsqueciMinhaSenha.fxml"));
 			VBox root = loader.load();
+			setRoot(root);
 			Scene scene = new Scene(root);
-			primaryStage.setTitle("MyPetSitter");
+			setScene(scene);
 			primaryStage.setScene(scene);
-			primaryStage.setResizable(false);
 			setStage(primaryStage);
-			stage.show();			
+			primaryStage.setResizable(false);
+			primaryStage.show();
 		}catch(Exception e) {
 			System.out.println("ERRO: " + e);
 		}
-		
-	
 	}
 	public static void setRoot(VBox newRoot) {
 		root = newRoot;
@@ -45,9 +48,4 @@ public class LoginFXML extends Application {
 	public static void setScene(Scene newScene) {
 		scene = newScene;
 	}
-	public static void main(String[] args){
-		launch(args);
-	}
-
-
 }

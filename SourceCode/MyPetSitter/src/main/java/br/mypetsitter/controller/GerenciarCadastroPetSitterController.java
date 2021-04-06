@@ -8,7 +8,7 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import br.mypetsitter.dao.PetSitterDAOJDBC;
 import br.mypetsitter.model.PetSitter;
-import br.mypetsitter.model.PetSitterPrincipal;
+import br.mypetsitter.model.PetSitterPrincipalFXML;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -192,7 +192,7 @@ public class GerenciarCadastroPetSitterController {
 		VBox vbox;
 		try {
 			vbox = FXMLLoader.load(getClass().getResource("/view/MudarSenhaPetSitter.fxml"));
-			BorderPane border = PetSitterPrincipal.getRoot();
+			BorderPane border = PetSitterPrincipalFXML.getRoot();
 			border.setCenter(vbox);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 
 import br.mypetsitter.dao.ServicoPetSitterDAOJDBC;
-import br.mypetsitter.model.PetSitterPrincipal;
+import br.mypetsitter.model.PetSitterPrincipalFXML;
 import br.mypetsitter.model.ServicoPetSitter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -57,7 +57,7 @@ public class GerenciarServicoPetSitterController implements Initializable {
     void incluiNovoServico(ActionEvent event) {
     	try {
 			VBox vbox = FXMLLoader.load(getClass().getResource("/view/IncluirServicoPetSitter.fxml"));
-			BorderPane border = PetSitterPrincipal.getRoot();
+			BorderPane border = PetSitterPrincipalFXML.getRoot();
 			border.setCenter(vbox);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -73,7 +73,7 @@ public class GerenciarServicoPetSitterController implements Initializable {
     private void atualizaTela() {
     	try {
 			VBox vbox = FXMLLoader.load(getClass().getResource("/view/GerenciarServicoPetSitter.fxml"));
-			BorderPane border = PetSitterPrincipal.getRoot();
+			BorderPane border = PetSitterPrincipalFXML.getRoot();
 			border.setCenter(vbox);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

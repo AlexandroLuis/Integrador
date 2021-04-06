@@ -51,7 +51,7 @@
             </HBox>
             <VBox alignment="CENTER" prefHeight="46.0" prefWidth="190.0">
                <children>
-                  <Hyperlink fx:id="hypRecuperarSenha" prefHeight="9.0" prefWidth="96.0" text="Recuperar senha" />
+                  <Hyperlink fx:id="hypRecuperarSenha" onAction="#recuperarSenha" prefHeight="9.0" prefWidth="96.0" text="Recuperar senha" />
                   <Hyperlink fx:id="hypCadastro" onAction="#cadastrarUsuario" text="Não tem cadastro? Cadastre-se!" />
                </children>
             </VBox>

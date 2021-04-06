@@ -3,7 +3,7 @@ package br.mypetsitter.controller;
 import java.io.IOException;
 
 import br.mypetsitter.model.LoginFXML;
-import br.mypetsitter.model.PetSitterPrincipal;
+import br.mypetsitter.model.PetSitterPrincipalFXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +17,7 @@ public class MenuPrincipalPetSitterController {
     void alteraDadosPetSitter(ActionEvent event) {
     	try {
 			VBox vbox = FXMLLoader.load(getClass().getResource("/view/GerenciarCadastroPetSitter.fxml"));
-			BorderPane border = PetSitterPrincipal.getRoot();
+			BorderPane border = PetSitterPrincipalFXML.getRoot();
 			border.setCenter(vbox);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -35,7 +35,7 @@ public class MenuPrincipalPetSitterController {
     void mostraServicos(ActionEvent event) {
     	try {
 			VBox vbox = FXMLLoader.load(getClass().getResource("/view/GerenciarServicoPetSitter.fxml"));
-			BorderPane border = PetSitterPrincipal.getRoot();
+			BorderPane border = PetSitterPrincipalFXML.getRoot();
 			border.setCenter(vbox);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -59,8 +59,8 @@ public class MenuPrincipalPetSitterController {
     	try {
 			loginFXML.start(new Stage());
 			fechaJanela();
-	    	if(PetSitterPrincipal.getScene() != null) {
-	    		PetSitterPrincipal.getScene().setRoot(null);
+	    	if(PetSitterPrincipalFXML.getScene() != null) {
+	    		PetSitterPrincipalFXML.getScene().setRoot(null);
 	    	}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -69,6 +69,6 @@ public class MenuPrincipalPetSitterController {
 
     }
     private void fechaJanela() {
-    	PetSitterPrincipal.getStage().close();
+    	PetSitterPrincipalFXML.getStage().close();
     }
 }

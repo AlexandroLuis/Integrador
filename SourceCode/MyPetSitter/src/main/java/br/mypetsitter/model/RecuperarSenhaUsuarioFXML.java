@@ -6,48 +6,53 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class LoginFXML extends Application {
-	private static Scene scene;
-	private static Stage stage;
+public class RecuperarSenhaUsuarioFXML extends Application {
 	private static VBox root;
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
-			VBox root = loader.load();
-			Scene scene = new Scene(root);
-			primaryStage.setTitle("MyPetSitter");
-			primaryStage.setScene(scene);
-			primaryStage.setResizable(false);
-			setStage(primaryStage);
-			stage.show();			
-		}catch(Exception e) {
-			System.out.println("ERRO: " + e);
-		}
-		
-	
-	}
-	public static void setRoot(VBox newRoot) {
-		root = newRoot;
-	}
-	public static VBox getRoot() {
-		return root;
-	}
-	public static Stage getStage() {
-		return stage;
-	}
-	private void setStage(Stage newStage) {
-		stage = newStage;
-	}
-	public static Scene getScene() {
-		return scene;
-	}
-	public static void setScene(Scene newScene) {
-		scene = newScene;
-	}
-	public static void main(String[] args){
+	private static Stage stage;
+	private static Scene scene;
+
+	public static void main(String[] args) {
 		launch(args);
 	}
 
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/RecuperarSenhaUsuario.fxml"));
+			VBox root = loader.load();
+			setRoot(root);
+			Scene scene = new Scene(root);
+			setScene(scene);
+			primaryStage.setScene(scene);
+			setStage(primaryStage);
+			primaryStage.setResizable(false);
+			primaryStage.show();
+		} catch (Exception e) {
+			System.out.println("ERRO: " + e);
+		}
+	}
 
+	public static void setRoot(VBox newRoot) {
+		root = newRoot;
+	}
+
+	public static VBox getRoot() {
+		return root;
+	}
+
+	public static Stage getStage() {
+		return stage;
+	}
+
+	private void setStage(Stage newStage) {
+		stage = newStage;
+	}
+
+	public static Scene getScene() {
+		return scene;
+	}
+
+	public static void setScene(Scene newScene) {
+		scene = newScene;
+	}
 }

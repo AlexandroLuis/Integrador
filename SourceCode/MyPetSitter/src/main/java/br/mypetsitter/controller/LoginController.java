@@ -5,8 +5,9 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import br.mypetsitter.dao.PetSitterDAOJDBC;
 import br.mypetsitter.model.PetSitter;
-import br.mypetsitter.model.PetSitterPrincipal;
+import br.mypetsitter.model.PetSitterPrincipalFXML;
 import br.mypetsitter.model.CadastroUsuarioFXML;
+import br.mypetsitter.model.EsqueciMinhaSenhaFXML;
 import br.mypetsitter.model.LoginFXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,7 +86,7 @@ public class LoginController implements Initializable {
 		boolean existe = autonomoDao.autenticarPetSitter(autonomo);
 		if (existe) {
 			System.out.println("Logou");
-			PetSitterPrincipal petSitterPrincipal = new PetSitterPrincipal();
+			PetSitterPrincipalFXML petSitterPrincipal = new PetSitterPrincipalFXML();
 			try {
 				petSitterPrincipal.start(new Stage());
 				fechaJanela();
@@ -114,7 +115,17 @@ public class LoginController implements Initializable {
 
 	@FXML
 	void recuperarSenha(ActionEvent event) {
-		System.out.println("Recuperar Senha");
+		EsqueciMinhaSenhaFXML esqueciMinhaSenha = new EsqueciMinhaSenhaFXML();
+		try {
+			fechaJanela();
+			esqueciMinhaSenha.start(new Stage());
+			if (LoginFXML.getScene() != null) {
+				LoginFXML.getScene().setRoot(null);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	private void fechaJanela() {

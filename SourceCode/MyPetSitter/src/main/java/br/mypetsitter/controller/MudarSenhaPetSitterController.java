@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import com.jfoenix.controls.JFXPasswordField;
 import br.mypetsitter.dao.PetSitterDAOJDBC;
 import br.mypetsitter.model.PetSitter;
-import br.mypetsitter.model.PetSitterPrincipal;
+import br.mypetsitter.model.PetSitterPrincipalFXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,7 +47,7 @@ public class MudarSenhaPetSitterController {
 							alert.showAndWait();
 							try {
 								VBox vbox = FXMLLoader.load(getClass().getResource("/view/PetSitterPrincipal.fxml"));
-								BorderPane border = PetSitterPrincipal.getRoot();
+								BorderPane border = PetSitterPrincipalFXML.getRoot();
 								border.setCenter(vbox);
 							} catch (IOException e) {
 								// TODO Auto-generated catch block

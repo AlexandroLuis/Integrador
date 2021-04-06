@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="525.0" prefWidth="350.0" style="-fx-background-color: lightSeaGreen;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="br.mypetsitter.controller.RecuperarSenhaUsuarioController">
+   <children>
+      <ImageView fitHeight="151.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="329.0" prefWidth="264.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="Insira a nova senha">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="63.0" prefWidth="264.0" spacing="5.0">
+               <children>
+                  <Label text="Nova senha:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="tfdNovaSenha" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="158.0" prefHeight="44.0" prefWidth="238.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="103.0" text="Confirmar senha:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="tfdConfirmaNovaSenha" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="66.0" prefWidth="264.0">
+               <children>
+                  <JFXButton onAction="#alterarSenha" style="-fx-background-color: lightSeaGreen;" text="Alterar senha" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="37.0" top="17.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" top="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+   </padding>
+</VBox>

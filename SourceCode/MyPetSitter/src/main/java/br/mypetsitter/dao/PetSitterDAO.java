@@ -19,4 +19,6 @@ public interface PetSitterDAO {
 	public boolean autenticarPetSitter(PetSitter autonomo) throws SQLException;
 	
 	public boolean existeUsuario(String petSitterId) throws SQLException;
+	
+	public boolean buscaUsuario(String petSitterId, String cpf) throws SQLException;
 }

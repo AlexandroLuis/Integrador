@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="525.0" prefWidth="350.0" style="-fx-background-color: lightSeaGreen;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="br.mypetsitter.controller.EsqueciMinhaSenhaController">
+   <children>
+      <ImageView fitHeight="151.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="329.0" prefWidth="264.0" spacing="10.0" style="-fx-background-color: white;">
+         <VBox.margin>
+            <Insets bottom="15.0" top="35.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Recuperar Senha">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="63.0" prefWidth="264.0" spacing="5.0">
+               <children>
+                  <Label text="Insira o cpf:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfdCpf" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="158.0" prefHeight="44.0" prefWidth="264.0" spacing="5.0">
+               <children>
+                  <Label text="Usuário:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfdUsuario" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="66.0" prefWidth="264.0">
+               <children>
+                  <JFXButton onAction="#verificarCredenciais" style="-fx-background-color: lightSeaGreen;" text="Verificar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="37.0" top="17.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="30.0" />
+   </padding>
+</VBox>
